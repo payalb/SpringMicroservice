@@ -19,3 +19,21 @@ For client of zipkin:
  spring.zipkin.base-url=http://localhost:9411/
 spring.sleuth.sampler.probability=1
 NOTE: By default spring.sleuth.sampler.probability=0.1 which means only 10% of tracing information will be exported to Zipkin. Make it to your desired percentage.
+
+Install docker on ubuntu machine:
+ec2 launch instance:
+ubuntu
+install docker:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt-get update
+
+apt-cache policy docker-ce
+
+sudo apt-get install -y docker-ce
+
+ sudo systemctl status docker
+
+sudo docker run hello-world
